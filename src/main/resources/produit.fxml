@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="156.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.controllers.ProduitController">
+   <children>
+      <Pane prefHeight="156.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="19.0" layoutY="11.0" prefHeight="24.0" prefWidth="79.0" text="Nom :" />
+            <Label fx:id="nom" layoutX="109.0" layoutY="14.0" prefHeight="21.0" prefWidth="138.0" text="title" />
+            <Button layoutX="497.0" layoutY="90.0" mnemonicParsing="false" onAction="#ach" prefHeight="31.0" prefWidth="89.0" text="Acheter" />
+            <Label fx:id="id" layoutX="128.0" layoutY="14.0" opacity="0.0" text="Label" />
+            <Label layoutX="17.0" layoutY="41.0" prefHeight="24.0" prefWidth="79.0" text="Description:" />
+            <Label fx:id="desc" layoutX="107.0" layoutY="44.0" prefHeight="21.0" prefWidth="138.0" text="title" />
+            <Label layoutX="18.0" layoutY="74.0" prefHeight="24.0" prefWidth="79.0" text="Prix :" />
+            <Label fx:id="prix" layoutX="108.0" layoutY="77.0" prefHeight="21.0" prefWidth="138.0" text="title" />
+            <TextField fx:id="tf_qte" layoutX="494.0" layoutY="50.0" prefHeight="31.0" prefWidth="96.0" />
+            <Label layoutX="497.0" layoutY="14.0" prefHeight="21.0" prefWidth="89.0" text="Quanite :" />
+            <Label layoutX="17.0" layoutY="109.0" prefHeight="24.0" prefWidth="79.0" text="Categorie :" />
+            <Label fx:id="categorie" layoutX="94.0" layoutY="111.0" prefHeight="21.0" prefWidth="138.0" text="title" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

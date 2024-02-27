@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.controllers.GuiController">
+  <children>
+      <Pane fx:id="pn_login" prefHeight="610.0" prefWidth="1010.0" style="-fx-background-color: orange;">
+         <children>
+            <Button layoutX="753.0" layoutY="272.0" mnemonicParsing="false" onAction="#btn_client" prefHeight="56.0" prefWidth="179.0" text="frontoffice" />
+            <Button layoutX="96.0" layoutY="272.0" mnemonicParsing="false" onAction="#btn_admin" prefHeight="56.0" prefWidth="179.0" text="backoffice" />
+            <Label layoutX="418.0" layoutY="114.0" prefHeight="56.0" prefWidth="443.0" text="Login as" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pn_front" layoutX="4.0" layoutY="3.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: orange;">
+         <children>
+            <Button layoutX="615.0" layoutY="500.0" mnemonicParsing="false" onAction="#btn_allproductfront" prefHeight="92.0" prefWidth="371.0" text="Product list" />
+            <Button layoutX="387.0" layoutY="500.0" mnemonicParsing="false" onAction="#logout" prefHeight="92.0" prefWidth="225.0" text="Se deconnecter" />
+            <Pane fx:id="pn_allproduct" prefHeight="494.0" prefWidth="1000.0" style="-fx-background-color: orange;">
+               <children>
+                  <Label layoutX="340.0" layoutY="32.0" prefHeight="66.0" prefWidth="389.0" text="Product list" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="29.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fx:id="scrole" layoutX="68.0" layoutY="129.0" prefHeight="354.0" prefWidth="881.0">
+                     <content>
+                        <GridPane fx:id="grid">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="pn_admin" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: orange;">
+         <children>
+            <Button layoutX="14.0" layoutY="500.0" mnemonicParsing="false" onAction="#btn_addproduct" prefHeight="92.0" prefWidth="179.0" text="Add product" />
+            <Button layoutX="615.0" layoutY="500.0" mnemonicParsing="false" onAction="#btn_allproductsback" prefHeight="92.0" prefWidth="371.0" text="Products list" />
+            <Button layoutX="387.0" layoutY="500.0" mnemonicParsing="false" onAction="#logout" prefHeight="92.0" prefWidth="225.0" text="Se deconnecter" />
+            <Pane fx:id="pn_modifierPro" layoutX="1.0" layoutY="-4.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: orange;">
+               <children>
+                  <Label layoutX="382.0" layoutY="29.0" prefHeight="56.0" prefWidth="295.0" text="Update a product" textAlignment="CENTER" textFill="#5241e4">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_nom1" layoutX="28.0" layoutY="168.0" prefHeight="31.0" prefWidth="491.0" />
+                  <Label layoutX="28.0" layoutY="106.0" prefHeight="56.0" prefWidth="295.0" text="Product name :" textAlignment="CENTER" textFill="#5241e4">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="798.0" layoutY="407.0" mnemonicParsing="false" onAction="#validermodifprod" prefHeight="31.0" prefWidth="139.0" text="envoyer" />
+                  <TextField fx:id="tf_description1" layoutX="28.0" layoutY="266.0" prefHeight="72.0" prefWidth="491.0" />
+                  <Label layoutX="28.0" layoutY="204.0" prefHeight="56.0" prefWidth="295.0" text="Product description :" textAlignment="CENTER" textFill="#5241e4">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_prix1" layoutX="28.0" layoutY="402.0" prefHeight="39.0" prefWidth="491.0" />
+                  <Label layoutX="28.0" layoutY="340.0" prefHeight="56.0" prefWidth="295.0" text="Product price:" textAlignment="CENTER" textFill="#5241e4">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_categorie1" layoutX="537.0" layoutY="166.0" prefHeight="31.0" prefWidth="395.0" />
+                  <Label layoutX="537.0" layoutY="104.0" prefHeight="56.0" prefWidth="295.0" text="Product category:" textAlignment="CENTER" textFill="#5241e4">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_id" editable="false" layoutX="547.0" layoutY="234.0" opacity="0.0" prefHeight="31.0" prefWidth="395.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="pn_addproduct" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: orange;">
+               <children>
+                  <Label layoutX="382.0" layoutY="29.0" prefHeight="56.0" prefWidth="295.0" text="Create a product" textAlignment="CENTER" textFill="#5241e4">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_nom" layoutX="28.0" layoutY="168.0" prefHeight="31.0" prefWidth="491.0" />
+                  <Label layoutX="28.0" layoutY="106.0" prefHeight="56.0" prefWidth="295.0" text="Product name :" textAlignment="CENTER" textFill="#5241e4">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="798.0" layoutY="407.0" mnemonicParsing="false" onAction="#validerajoutprod" prefHeight="31.0" prefWidth="139.0" text="envoyer" />
+                  <TextField fx:id="tf_description" layoutX="28.0" layoutY="266.0" prefHeight="72.0" prefWidth="491.0" />
+                  <Label layoutX="28.0" layoutY="204.0" prefHeight="56.0" prefWidth="295.0" text="Product description :" textAlignment="CENTER" textFill="#5241e4">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_prix" layoutX="28.0" layoutY="402.0" prefHeight="39.0" prefWidth="491.0" />
+                  <Label layoutX="28.0" layoutY="340.0" prefHeight="56.0" prefWidth="295.0" text="Product price:" textAlignment="CENTER" textFill="#5241e4">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tf_categorie" layoutX="537.0" layoutY="166.0" prefHeight="31.0" prefWidth="395.0" />
+                  <Label layoutX="537.0" layoutY="104.0" prefHeight="56.0" prefWidth="295.0" text="Product category:" textAlignment="CENTER" textFill="#5241e4">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pn_allprodback" prefHeight="494.0" prefWidth="1000.0" style="-fx-background-color: orange;">
+               <children>
+                  <Label layoutX="340.0" layoutY="32.0" prefHeight="66.0" prefWidth="389.0" text="Products list" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="29.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="display" layoutX="30.0" layoutY="98.0" prefHeight="392.0" prefWidth="941.0">
+                    <columns>
+                      <TableColumn fx:id="cid" prefWidth="111.0" text="ID" />
+                      <TableColumn fx:id="cnom" prefWidth="130.0" text="Nom" />
+                        <TableColumn fx:id="cdescription" minWidth="0.0" prefWidth="182.0" text="Description" />
+                        <TableColumn fx:id="ccategorie" prefWidth="158.0" text="categorie" />
+                        <TableColumn fx:id="cdate" prefWidth="110.0" text="dateajout" />
+                        <TableColumn fx:id="cprix" prefWidth="119.0" text="prix" />
+                        <TableColumn fx:id="coption" prefWidth="119.0" text="option" />
+                    </columns>
+                  </TableView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Pane>
+            <Pane fx:id="pn_allvente" layoutX="1.0" layoutY="-3.0" prefHeight="494.0" prefWidth="1000.0" style="-fx-background-color: orange;">
+               <children>
+                  <Label layoutX="340.0" layoutY="32.0" prefHeight="66.0" prefWidth="389.0" text="Ventes list" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold Italic" size="29.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="displayv" layoutX="30.0" layoutY="98.0" prefHeight="392.0" prefWidth="941.0">
+                     <columns>
+                        <TableColumn fx:id="cid1" prefWidth="111.0" text="ID" />
+                        <TableColumn fx:id="cqte" prefWidth="130.0" text="quantitevendu" />
+                        <TableColumn fx:id="cmont" prefWidth="158.0" text="montanttotal" />
+                        <TableColumn fx:id="cfk" prefWidth="110.0" text="idproduit" />
+                        <TableColumn fx:id="coption1" prefWidth="119.0" text="option" />
+                     </columns>
+                  </TableView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Pane>
+            <Button layoutX="200.0" layoutY="500.0" mnemonicParsing="false" onAction="#btn_allvente" prefHeight="92.0" prefWidth="179.0" text="List vente" />
+         </children>
+      </Pane>
+   </children>  
+</AnchorPane>
